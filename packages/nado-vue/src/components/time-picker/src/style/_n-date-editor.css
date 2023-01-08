@@ -1,0 +1,86 @@
+.n-date-editor {
+  --n-comp-date-editor-width: 220px;
+  --n-comp-date-editor-month-range-width: 300px;
+  --n-comp-date-editor-date-range-width: 350px;
+  --n-comp-date-editor-date-time-range-width: 400px;
+
+  text-align: left;
+}
+
+.n-date-editor--monthrange {
+  --n-comp-date-editor-width: var(--n-comp-date-editor-month-range-width);
+}
+
+.n-date-editor--daterange,
+.n-date-editor--timerange {
+  --n-comp-date-editor-width: var(--n-comp-date-editor-date-range-width);
+}
+
+.n-date-editor--datetimerange {
+  --n-comp-date-editor-width: var(--n-comp-date-editor-date-time-range-width);
+}
+
+/* input */
+.n-date-editor.n-input,
+.n-date-editor.n-input__wrapper {
+  width: var(--n-comp-date-editor-width);
+}
+
+.n-date-editor--timerange.n-input__wrapper {
+  border: var(--n-sys-border);
+}
+
+.n-date-editor--dates .n-input__wrapper {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* icon */
+.n-date-editor .close-icon {
+  cursor: pointer;
+}
+
+.n-date-editor .clear-icon {
+  color: var(--n-sys-color-text-secondary);
+
+  cursor: pointer;
+}
+
+.n-date-editor .n-range__icon {
+  float: left;
+
+  height: inherit;
+
+  color: var(--n-sys-color-secondary);
+  font-size: 14px;
+}
+
+.n-date-editor .n-range__icon svg {
+  vertical-align: middle;
+}
+
+.n-date-editor .n-date-time-range-input::selection,
+.n-date-editor .n-input__inner::selection {
+  outline: none;
+}
+
+/* range icon */
+.n-date-editor .n-range__close-icon {
+  width: unset;
+  height: inherit;
+
+  color: var(--n-sys-color-secondary);
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.n-date-editor .n-range__close-icon svg {
+  vertical-align: middle;
+}
+
+.n-date-editor .n-range__close-icon--hidden {
+  visibility: hidden;
+
+  opacity: 0;
+}

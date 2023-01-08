@@ -1,0 +1,219 @@
+@layer components {
+  @keyframes progress {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 32px 0;
+    }
+  }
+
+  @keyframes progress {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 32px 0;
+    }
+  }
+
+  @keyframes indeterminate {
+    0% {
+      left: -100%;
+    }
+
+    100% {
+      left: 100%;
+    }
+  }
+
+  @keyframes indeterminate {
+    0% {
+      left: -100%;
+    }
+
+    100% {
+      left: 100%;
+    }
+  }
+
+  .n-progress {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    line-height: 1;
+  }
+
+  .n-progress--type-circle,
+  .n-progress--type-dashboard {
+    display: inline-block;
+  }
+
+  .n-progress-bar {
+    flex-grow: 1;
+
+    box-sizing: border-box;
+  }
+
+  .n-progress--without-text .n-progress-bar {
+    display: block;
+
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .n-progress--text-inside .n-progress-bar {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .n-progress-bar__outer {
+    position: relative;
+
+    height: 6px;
+
+    vertical-align: middle;
+
+    background-color: var(--n-sys-color-info-200);
+
+    overflow: hidden;
+  }
+
+  .n-progress-bar__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+
+    line-height: 1;
+    white-space: nowrap;
+    text-align: right;
+
+    background-color: var(--n-sys-color-secondary);
+
+    transition: width 0.6s ease;
+  }
+
+  .n-progress--appearance-primary .n-progress-bar__inner {
+    background-color: var(--n-sys-color-primary);
+  }
+
+  .n-progress--appearance-success .n-progress-bar__inner {
+    background-color: var(--n-sys-color-success);
+  }
+
+  .n-progress--appearance-warn .n-progress-bar__inner {
+    background-color: var(--n-sys-color-warn);
+  }
+
+  .n-progress--appearance-error .n-progress-bar__inner {
+    background-color: var(--n-sys-color-error);
+  }
+
+  .n-progress-bar__inner::after {
+    content: '';
+
+    display: inline-block;
+
+    height: 100%;
+
+    vertical-align: middle;
+  }
+
+  .n-progress-bar__inner--indeterminate {
+    transform: translateZ(0);
+
+    animation: indeterminate 3s infinite;
+  }
+
+  .n-progress-bar__inner-text {
+    display: inline-block;
+
+    margin: 0 5px;
+
+    color: var(--n-ref-palette-white);
+    font-size: 12px;
+    vertical-align: middle;
+  }
+
+  .n-progress__text {
+    display: flex;
+    align-items: center;
+
+    min-width: 50px;
+    margin-left: 5px;
+
+    color: var(--n-sys-color-text-default);
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .n-progress--type-circle .n-progress__text,
+  .n-progress--type-dashboard .n-progress__text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    justify-content: center;
+
+    width: 100%;
+    margin: 0;
+
+    transform: translate(0, -50%);
+  }
+
+  .n-progress--without-text .n-progress__text {
+    display: none;
+  }
+
+  .n-progress--appearance-primary .n-progress__text {
+    color: var(--n-sys-color-primary);
+  }
+
+  .n-progress--appearance-success .n-progress__text {
+    color: var(--n-sys-color-success);
+  }
+
+  .n-progress--appearance-warn .n-progress__text {
+    color: var(--n-sys-color-warn);
+  }
+
+  .n-progress--appearance-error .n-progress__text {
+    color: var(--n-sys-color-error);
+  }
+
+  .n-progress__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .n-progress-circle__track {
+    stroke: var(--n-sys-color-info-200);
+  }
+
+  /* .n-progress-circle__path {
+    stroke: var(--n-sys-color-secondary);
+  }
+
+  .n-progress--appearance-primary .n-progress-circle__path {
+    stroke: var(--n-sys-color-primary);
+  }
+
+  .n-progress--appearance-success .n-progress-circle__path {
+    stroke: var(--n-sys-color-success);
+  }
+
+  .n-progress--appearance-warn .n-progress-circle__path {
+    stroke: var(--n-sys-color-warn);
+  }
+
+  .n-progress--appearance-error .n-progress-circle__path {
+    stroke: var(--n-sys-color-error);
+  } */
+}

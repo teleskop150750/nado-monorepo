@@ -1,0 +1,4 @@
+{
+    "cSpell.words": ["Vitesse", "Vite", "unocss", "vitest", "vueuse", "pinia", "demi", "antfu", "iconify", "intlify", "vitejs", "unplugin", "pnpm"],
+    "stylelint.validate": ["vue", "css", "postcss"],
+}

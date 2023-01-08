@@ -1,0 +1,72 @@
+@layer components {
+  .n-year-table {
+    width: 100%;
+    margin: -1;
+
+    font-size: 12px;
+
+    border-collapse: collapse;
+  }
+
+  .n-year-table .n-icon {
+    color: var(--n-comp-date-picker-icon-color);
+  }
+
+  .n-year-table__cell {
+    padding: 20px 3px;
+
+    text-align: center;
+
+    cursor: pointer;
+  }
+
+  .n-year-table__cell:focus-visible {
+    outline: 0;
+  }
+
+  .n-year-table-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 24px;
+    margin: 0 auto;
+
+    color: var(--n-comp-date-picker-color-text);
+    line-height: 36px;
+    text-align: center;
+  }
+
+  .n-year-table-cell--is-today {
+    color: var(--n-sys-color-primary);
+    font-weight: 700;
+  }
+
+  .n-year-table-cell--is-disabled {
+    color: var(--n-text-color-placeholder);
+
+    background-color: var(--n-fill-color-light);
+
+    cursor: not-allowed;
+  }
+
+  .n-year-table-cell:hover {
+    color: var(--n-comp-date-picker-color-text-hover);
+  }
+
+  .n-year-table-cell--is-disabled:hover {
+    color: var(--n-text-color-placeholder);
+  }
+
+  .n-year-table-cell--is-current:not(.n-year-table-cell--is-disabled) {
+    color: var(--n-ref-palette-white);
+
+    background-color: var(--n-comp-date-picker-color-active);
+  }
+
+  .n-year-table__cell:focus-visible .n-year-table-cell {
+    outline: 2px solid var(--n-comp-date-picker-color-active);
+    outline-offset: 2px;
+  }
+}

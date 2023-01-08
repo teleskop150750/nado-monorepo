@@ -1,0 +1,10 @@
+[build.environment]
+  NODE_VERSION = "16"
+[build]
+  base = "apps/tracker.vue/"
+  publish = "dist"
+  command = "npx pnpm i --store=node_modules/.pnpm-store --frozen-lockfile && npx run build --filter @nado/tracker"
+[[redirects]]
+  from = "/*"
+  to = "index.html"
+  status = 200

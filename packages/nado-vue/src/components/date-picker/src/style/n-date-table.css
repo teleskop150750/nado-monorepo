@@ -1,0 +1,74 @@
+@layer components {
+  .n-date-table {
+    width: 100%;
+
+    font-size: 12px;
+
+    table-layout: fixed;
+
+    user-select: none;
+  }
+
+  .n-date-table__title {
+    color: var(--n-comp-date-picker-header-color-text);
+    font-weight: 400;
+  }
+
+  .n-date-table__cell {
+    position: relative;
+
+    width: 36px;
+    height: 40px;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    cursor: pointer;
+  }
+
+  .n-date-table__cell:focus {
+    outline: 0;
+  }
+
+  .n-date-table__cell--type-next-month,
+  .n-date-table__cell--type-prev-month {
+    color: var(--n-comp-date-picker-color-text-off);
+  }
+
+  .n-date-table__cell--is-today {
+    position: relative;
+  }
+
+
+  .n-date-table-cell--number-6,
+  .n-date-table-cell--number-7 {
+    color: var(--n-sys-color-error-500);
+  }
+
+  .n-date-table__cell--is-available:hover {
+    color: var(--n-comp-date-picker-color-text-hover) !important;
+  }
+
+  .n-date-table--is-week-mode .n-date-table__cell--is-available:hover {
+    color: var(--n-comp-date-picker-color-text);
+  }
+
+  .n-date-table--is-week-mode .n-date-table__row:hover td:first-child .n-date-table-cell {
+    margin-left: 5px;
+
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .n-date-table--is-week-mode .n-date-table__row:hover td:last-child .n-date-table-cell {
+    margin-right: 5px;
+
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .n-date-table__cell--is-current:not(.n-date-table__cell--is-disabled):focus-visible .n-date-table-cell__text {
+    outline: 2px solid var(--n-comp-date-picker-color-active);
+    outline-offset: 1px;
+  }
+}

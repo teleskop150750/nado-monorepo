@@ -1,0 +1,227 @@
+@layer themes {
+  .nado-theme {
+    --n-ref-palette-white: hsl(0deg 0% 100%);
+    --n-ref-palette-black: hsl(0deg 0% 0%);
+
+    /* Neutral */
+    --n-ref-palette-neutral-50: hsl(0deg 0% 98%);
+    --n-ref-palette-neutral-hsl-50: 0deg 0% 98%;
+    --n-ref-palette-neutral-100: hsl(0deg 0% 96%);
+    --n-ref-palette-neutral-hsl-100: 0deg 0% 96%;
+    --n-ref-palette-neutral-200: hsl(0deg 0% 90%);
+    --n-ref-palette-neutral-hsl-200: 0deg 0% 90%;
+    --n-ref-palette-neutral-300: hsl(0deg 0% 83%);
+    --n-ref-palette-neutral-hsl-300: 0deg 0% 83%;
+    --n-ref-palette-neutral-400: hsl(0deg 0% 64%);
+    --n-ref-palette-neutral-hsl-400: 0deg 0% 64%;
+    --n-ref-palette-neutral-500: hsl(0deg 0% 45%);
+    --n-ref-palette-neutral-hsl-500: 0deg 0% 45%;
+    --n-ref-palette-neutral-600: hsl(0deg 0% 32%);
+    --n-ref-palette-neutral-hsl-600: 0deg 0% 32%;
+    --n-ref-palette-neutral-700: hsl(0deg 0% 25%);
+    --n-ref-palette-neutral-hsl-700: 0deg 0% 25%;
+    --n-ref-palette-neutral-800: hsl(0deg 0% 15%);
+    --n-ref-palette-neutral-hsl-800: 0deg 0% 15%;
+    --n-ref-palette-neutral-900: hsl(0deg 0% 9%);
+    --n-ref-palette-neutral-hsl-900: 0deg 0% 9%;
+
+    /* slate */
+    --n-ref-palette-slate-50: hsl(210deg 40% 98%);
+    --n-ref-palette-slate-hsl-50: 210deg 40% 98%;
+    --n-ref-palette-slate-100: hsl(210deg 40% 96%);
+    --n-ref-palette-slate-hsl-100: 210deg 40% 96%;
+    --n-ref-palette-slate-200: hsl(214deg 32% 91%);
+    --n-ref-palette-slate-hsl-200: 214deg 32% 91%;
+    --n-ref-palette-slate-300: hsl(213deg 27% 84%);
+    --n-ref-palette-slate-hsl-300: 213deg 27% 84%;
+    --n-ref-palette-slate-400: hsl(215deg 20% 65%);
+    --n-ref-palette-slate-hsl-400: 215deg 20% 65%;
+    --n-ref-palette-slate-500: hsl(215deg 16% 47%);
+    --n-ref-palette-slate-hsl-500: 215deg 16% 47%;
+    --n-ref-palette-slate-600: hsl(215deg 19% 35%);
+    --n-ref-palette-slate-hsl-600: 215deg 19% 35%;
+    --n-ref-palette-slate-700: hsl(215deg 25% 27%);
+    --n-ref-palette-slate-hsl-700: 215deg 25% 27%;
+    --n-ref-palette-slate-800: hsl(217deg 33% 17%);
+    --n-ref-palette-slate-hsl-800: 217deg 33% 17%;
+    --n-ref-palette-slate-900: hsl(222deg 47% 11%);
+    --n-ref-palette-slate-hsl-900: 222deg 47% 11%;
+
+    /* blue-bell */
+    --n-ref-palette-blue-bell-50: hsl(195deg 29% 97%);
+    --n-ref-palette-blue-bell-hsl-50: 195deg 29% 97%;
+    --n-ref-palette-blue-bell-100: hsl(206deg 70% 94%);
+    --n-ref-palette-blue-bell-hsl-100: 206deg 70% 94%;
+    --n-ref-palette-blue-bell-200: hsl(211deg 74% 87%);
+    --n-ref-palette-blue-bell-hsl-200: 211deg 74% 87%;
+    --n-ref-palette-blue-bell-300: hsl(214deg 64% 75%);
+    --n-ref-palette-blue-bell-hsl-300: 214deg 64% 75%;
+    --n-ref-palette-blue-bell-400: hsl(217deg 58% 63%);
+    --n-ref-palette-blue-bell-hsl-400: 217deg 58% 63%;
+    --n-ref-palette-blue-bell-500: hsl(224deg 52% 55%);
+    --n-ref-palette-blue-bell-hsl-500: 224deg 52% 55%;
+    --n-ref-palette-blue-bell-600: hsl(231deg 44% 48%);
+    --n-ref-palette-blue-bell-hsl-600: 231deg 44% 48%;
+    --n-ref-palette-blue-bell-700: hsl(233deg 45% 39%);
+    --n-ref-palette-blue-bell-hsl-700: 233deg 45% 39%;
+    --n-ref-palette-blue-bell-800: hsl(234deg 46% 27%);
+    --n-ref-palette-blue-bell-hsl-800: 234deg 46% 27%;
+    --n-ref-palette-blue-bell-900: hsl(231deg 49% 17%);
+    --n-ref-palette-blue-bell-hsl-900: 231deg 49% 17%;
+
+    /* gray */
+    --n-ref-palette-gray-50: hsl(210deg 20% 98%);
+    --n-ref-palette-gray-hsl-50: 210deg 20% 98%;
+    --n-ref-palette-gray-100: hsl(220deg 14% 96%);
+    --n-ref-palette-gray-hsl-100: 220deg 14% 96%;
+    --n-ref-palette-gray-200: hsl(220deg 13% 91%);
+    --n-ref-palette-gray-hsl-200: 220deg 13% 91%;
+    --n-ref-palette-gray-300: hsl(216deg 12% 84%);
+    --n-ref-palette-gray-hsl-300: 216deg 12% 84%;
+    --n-ref-palette-gray-400: hsl(218deg 11% 65%);
+    --n-ref-palette-gray-hsl-400: 218deg 11% 65%;
+    --n-ref-palette-gray-500: hsl(220deg 9% 46%);
+    --n-ref-palette-gray-hsl-500: 220deg 9% 46%;
+    --n-ref-palette-gray-600: hsl(215deg 14% 34%);
+    --n-ref-palette-gray-hsl-600: 215deg 14% 34%;
+    --n-ref-palette-gray-700: hsl(217deg 19% 27%);
+    --n-ref-palette-gray-hsl-700: 217deg 19% 27%;
+    --n-ref-palette-gray-800: hsl(215deg 28% 17%);
+    --n-ref-palette-gray-hsl-800: 215deg 28% 17%;
+    --n-ref-palette-gray-900: hsl(221deg 39% 11%);
+    --n-ref-palette-gray-hsl-900: 221deg 39% 11%;
+
+    /* blue */
+    --n-ref-palette-blue-50: hsl(214deg 100% 97%);
+    --n-ref-palette-blue-hsl-50: 214deg 100% 97%;
+    --n-ref-palette-blue-100: hsl(214deg 95% 93%);
+    --n-ref-palette-blue-hsl-100: 214deg 95% 93%;
+    --n-ref-palette-blue-200: hsl(213deg 97% 87%);
+    --n-ref-palette-blue-hsl-200: 213deg 97% 87%;
+    --n-ref-palette-blue-300: hsl(212deg 96% 78%);
+    --n-ref-palette-blue-hsl-300: 212deg 96% 78%;
+    --n-ref-palette-blue-400: hsl(213deg 94% 68%);
+    --n-ref-palette-blue-hsl-400: 213deg 94% 68%;
+    --n-ref-palette-blue-500: hsl(217deg 91% 60%);
+    --n-ref-palette-blue-hsl-500: 217deg 91% 60%;
+    --n-ref-palette-blue-600: hsl(221deg 83% 53%);
+    --n-ref-palette-blue-hsl-600: 221deg 83% 53%;
+    --n-ref-palette-blue-700: hsl(224deg 76% 48%);
+    --n-ref-palette-blue-hsl-700: 224deg 76% 48%;
+    --n-ref-palette-blue-800: hsl(226deg 71% 40%);
+    --n-ref-palette-blue-hsl-800: 226deg 71% 40%;
+    --n-ref-palette-blue-900: hsl(224deg 64% 33%);
+    --n-ref-palette-blue-hsl-900: 224deg 64% 33%;
+
+    /* indigo */
+    --n-ref-palette-indigo-50: hsl(226deg 100% 97%);
+    --n-ref-palette-indigo-hsl-50: 226deg 100% 97%;
+    --n-ref-palette-indigo-100: hsl(226deg 100% 94%);
+    --n-ref-palette-indigo-hsl-100: 226deg 100% 94%;
+    --n-ref-palette-indigo-200: hsl(228deg 96% 89%);
+    --n-ref-palette-indigo-hsl-200: 228deg 96% 89%;
+    --n-ref-palette-indigo-300: hsl(230deg 94% 82%);
+    --n-ref-palette-indigo-hsl-300: 230deg 94% 82%;
+    --n-ref-palette-indigo-400: hsl(234deg 89% 74%);
+    --n-ref-palette-indigo-hsl-400: 234deg 89% 74%;
+    --n-ref-palette-indigo-500: hsl(239deg 84% 67%);
+    --n-ref-palette-indigo-hsl-500: 239deg 84% 67%;
+    --n-ref-palette-indigo-600: hsl(243deg 75% 59%);
+    --n-ref-palette-indigo-hsl-600: 243deg 75% 59%;
+    --n-ref-palette-indigo-700: hsl(245deg 58% 51%);
+    --n-ref-palette-indigo-hsl-700: 245deg 58% 51%;
+    --n-ref-palette-indigo-800: hsl(244deg 55% 41%);
+    --n-ref-palette-indigo-hsl-800: 244deg 55% 41%;
+    --n-ref-palette-indigo-900: hsl(242deg 47% 34%);
+    --n-ref-palette-indigo-hsl-900: 242deg 47% 34%;
+
+    /* red */
+    --n-ref-palette-red-50: hsl(0deg 86% 97%);
+    --n-ref-palette-red-hsl-50: 0deg 86% 97%;
+    --n-ref-palette-red-100: hsl(0deg 93% 94%);
+    --n-ref-palette-red-hsl-100: 0deg 93% 94%;
+    --n-ref-palette-red-200: hsl(0deg 96% 89%);
+    --n-ref-palette-red-hsl-200: 0deg 96% 89%;
+    --n-ref-palette-red-300: hsl(0deg 94% 82%);
+    --n-ref-palette-red-hsl-300: 0deg 94% 82%;
+    --n-ref-palette-red-400: hsl(0deg 91% 71%);
+    --n-ref-palette-red-hsl-400: 0deg 91% 71%;
+    --n-ref-palette-red-500: hsl(0deg 84% 60%);
+    --n-ref-palette-red-hsl-500: 0deg 84% 60%;
+    --n-ref-palette-red-600: hsl(0deg 72% 51%);
+    --n-ref-palette-red-hsl-600: 0deg 72% 51%;
+    --n-ref-palette-red-700: hsl(0deg 74% 42%);
+    --n-ref-palette-red-hsl-700: 0deg 74% 42%;
+    --n-ref-palette-red-800: hsl(0deg 70% 35%);
+    --n-ref-palette-red-hsl-800: 0deg 70% 35%;
+    --n-ref-palette-red-900: hsl(0deg 63% 31%);
+    --n-ref-palette-red-hsl-900: 0deg 63% 31%;
+
+    /* Pink */
+
+    --n-ref-palette-pink-50: hsl(327deg 73% 97%);
+    --n-ref-palette-pink-hsl-50: 327deg 73% 97%;
+    --n-ref-palette-pink-100: hsl(326deg 78% 95%);
+    --n-ref-palette-pink-hsl-100: 326deg 78% 95%;
+    --n-ref-palette-pink-200: hsl(326deg 85% 90%);
+    --n-ref-palette-pink-hsl-200: 326deg 85% 90%;
+    --n-ref-palette-pink-300: hsl(327deg 87% 82%);
+    --n-ref-palette-pink-hsl-300: 327deg 87% 82%;
+    --n-ref-palette-pink-400: hsl(329deg 86% 70%);
+    --n-ref-palette-pink-hsl-400: 329deg 86% 70%;
+    --n-ref-palette-pink-500: hsl(330deg 81% 60%);
+    --n-ref-palette-pink-hsl-500: 330deg 81% 60%;
+    --n-ref-palette-pink-600: hsl(333deg 71% 51%);
+    --n-ref-palette-pink-hsl-600: 333deg 71% 51%;
+    --n-ref-palette-pink-700: hsl(335deg 78% 42%);
+    --n-ref-palette-pink-hsl-700: 335deg 78% 42%;
+    --n-ref-palette-pink-800: hsl(336deg 74% 35%);
+    --n-ref-palette-pink-hsl-800: 336deg 74% 35%;
+    --n-ref-palette-pink-900: hsl(336deg 69% 30%);
+    --n-ref-palette-pink-hsl-900: 336deg 69% 30%;
+
+    /* green */
+    --n-ref-palette-green-50: hsl(138deg 76% 97%);
+    --n-ref-palette-green-hsl-50: 138deg 76% 97%;
+    --n-ref-palette-green-100: hsl(141deg 84% 93%);
+    --n-ref-palette-green-hsl-100: 141deg 84% 93%;
+    --n-ref-palette-green-200: hsl(141deg 79% 85%);
+    --n-ref-palette-green-hsl-200: 141deg 79% 85%;
+    --n-ref-palette-green-300: hsl(142deg 77% 73%);
+    --n-ref-palette-green-hsl-300: 142deg 77% 73%;
+    --n-ref-palette-green-400: hsl(142deg 69% 58%);
+    --n-ref-palette-green-hsl-400: 142deg 69% 58%;
+    --n-ref-palette-green-500: hsl(142deg 71% 45%);
+    --n-ref-palette-green-hsl-500: 142deg 71% 45%;
+    --n-ref-palette-green-600: hsl(142deg 76% 36%);
+    --n-ref-palette-green-hsl-600: 142deg 76% 36%;
+    --n-ref-palette-green-700: hsl(142deg 72% 29%);
+    --n-ref-palette-green-hsl-700: 142deg 72% 29%;
+    --n-ref-palette-green-800: hsl(143deg 64% 24%);
+    --n-ref-palette-green-hsl-800: 143deg 64% 24%;
+    --n-ref-palette-green-900: hsl(144deg 61% 20%);
+    --n-ref-palette-green-hsl-900: 144deg 61% 20%;
+
+    /* yellow */
+    --n-ref-palette-yellow-50: hsl(55deg 92% 95%);
+    --n-ref-palette-yellow-hsl-50: 55deg 92% 95%;
+    --n-ref-palette-yellow-100: hsl(55deg 97% 88%);
+    --n-ref-palette-yellow-hsl-100: 55deg 97% 88%;
+    --n-ref-palette-yellow-200: hsl(53deg 98% 77%);
+    --n-ref-palette-yellow-hsl-200: 53deg 98% 77%;
+    --n-ref-palette-yellow-300: hsl(50deg 98% 64%);
+    --n-ref-palette-yellow-hsl-300: 50deg 98% 64%;
+    --n-ref-palette-yellow-400: hsl(48deg 96% 53%);
+    --n-ref-palette-yellow-hsl-400: 48deg 96% 53%;
+    --n-ref-palette-yellow-500: hsl(45deg 93% 47%);
+    --n-ref-palette-yellow-hsl-500: 45deg 93% 47%;
+    --n-ref-palette-yellow-600: hsl(41deg 96% 40%);
+    --n-ref-palette-yellow-hsl-600: 41deg 96% 40%;
+    --n-ref-palette-yellow-700: hsl(35deg 92% 33%);
+    --n-ref-palette-yellow-hsl-700: 35deg 92% 33%;
+    --n-ref-palette-yellow-800: hsl(32deg 81% 29%);
+    --n-ref-palette-yellow-hsl-800: 32deg 81% 29%;
+    --n-ref-palette-yellow-900: hsl(28deg 73% 26%);
+    --n-ref-palette-yellow-hsl-900: 28deg 73% 26%;
+  }
+}

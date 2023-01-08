@@ -1,0 +1,238 @@
+@layer components {
+  @layer defaults {
+    .n-input {
+      --n-comp-input-container-height: var(--n-sys-component-size);
+      --n-comp-input-container-font-size: var(--n-sys-font-size-small);
+      --n-comp-input-container-color-text: black;
+      --n-comp-input-container-color-text-disabled: var(--n-sys-color-text-disabled);
+      --n-comp-input-container-color-text-placeholder: var(--n-sys-color-text-placeholder);
+      --n-comp-input-container-border: var(--n-sys-border);
+      --n-comp-input-container-color-border-disabled: var(--n-sys-color-border-disabled);
+      --n-comp-input-container-radius-border: var(--n-sys-radius-border-base);
+      --n-comp-input-container-color-bg: var(--n-ref-palette-white);
+      --n-comp-input-container-color-bg-disabled: var(--n-sys-color-bg-disabled);
+      --n-comp-input-icon-color: var(--n-sys-color-secondary);
+      --n-comp-input-icon-color-disabled: var(--n-sys-color-text-disabled);
+
+      position: relative;
+
+      display: inline-flex;
+
+      width: 100%;
+
+      font-size: var(--n-comp-input-container-font-size);
+      line-height: calc(var(--n-comp-input-container-height) - 2px);
+      vertical-align: middle;
+    }
+
+    .n-input--size-small {
+      --n-comp-input-container-height: var(--n-sys-component-size-small);
+
+      font-size: 12px;
+    }
+
+    .n-input--size-large {
+      --n-comp-input-container-height: var(--n-sys-component-size-large);
+    }
+
+    .n-input--is-disabled {
+      --n-comp-input-icon-color: var(--n-comp-input-icon-color-disabled);
+
+      cursor: not-allowed;
+
+      opacity: 0.75;
+    }
+
+    .n-input__wrapper {
+      display: inline-flex;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+
+      padding: 0 16px;
+
+      border: var(--n-comp-input-container-border);
+
+      background-color: var(--n-comp-input-container-color-bg);
+      background-image: none;
+    }
+
+    .n-input--has-prefix .n-input__wrapper {
+      padding-left: 8px;
+    }
+
+    .n-input--has-suffix .n-input__wrapper {
+      padding-right: 8px;
+    }
+
+    .n-input__wrapper--is-focus {
+      outline: var(--n-sys-outline);
+    }
+
+    .n-input--is-success .n-input__wrapper {
+      border-color: var(--n-sys-color-border-success);
+
+      outline-color: var(--n-sys-color-outline-success);
+    }
+
+    .n-input--is-warn .n-input__wrapper {
+      border-color: var(--n-sys-color-border-warn);
+
+      outline-color: var(--n-sys-color-outline-warn);
+    }
+
+    .n-input--is-error .n-input__wrapper {
+      border-color: var(--n-sys-color-border-error);
+
+      outline-color: var(--n-sys-color-outline-error);
+    }
+
+    .n-input--is-disabled .n-input__wrapper {
+      border-color: var(--n-comp-input-container-color-border-disabled);
+
+      background-color: var(--n-comp-input-container-color-bg-disabled);
+
+      cursor: not-allowed;
+    }
+
+    .n-input__inner {
+      --n-comp-input-container-inner-height: calc(var(--n-comp-input-container-height) - 2px);
+
+      flex-grow: 1;
+
+      width: 100%;
+      height: var(--n-comp-input-container-inner-height);
+      margin: 0;
+      padding: 0;
+
+      color: var(--n-comp-input-container-color-text);
+      font-size: inherit;
+      font-family: inherit;
+      line-height: var(--n-comp-input-container-inner-height);
+
+      border: none;
+
+      background-color: transparent;
+
+      outline: none;
+
+      appearance: none;
+    }
+
+    .n-input--is-disabled .n-input__inner {
+      color: var(--n-comp-input-container-color-text-disabled);
+
+      cursor: not-allowed;
+    }
+
+    .n-input__inner::placeholder {
+      color: var(--n-comp-input-container-color-text-placeholder);
+    }
+
+    .n-input__inner::-ms-reveal,
+    .n-input__inner::-ms-clear {
+      display: none;
+    }
+
+    .n-input__prefix,
+    .n-input__suffix {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      align-items: center;
+
+      height: 100%;
+
+      color: var(--n-comp-input-icon-color);
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .n-input__prefix {
+      padding-right: 8px;
+    }
+
+    .n-input__suffix {
+      padding-left: 8px;
+    }
+
+    .n-input--is-disabled .n-input__prefix,
+    .n-input--is-disabled .n-input__suffix {
+      color: var(--n-comp-input-icon-color-disabled);
+    }
+
+    .n-input__prefix-inner {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      pointer-events: all;
+    }
+
+    .n-input__prefix-inner > :last-child {
+      margin-right: 8px;
+    }
+
+    .n-input__icon {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 24px;
+      height: 24px;
+
+      color: var(--n-comp-input-icon-color);
+      font-size: inherit;
+      line-height: inherit;
+
+      fill: currentcolor;
+    }
+
+    .n-input--size-small .n-input__icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    .n-input__prefix-inner > :first-child,
+    .n-input__prefix-inner > :first-child.n-input__icon {
+      margin-left: 0;
+    }
+
+    .n-input__clear {
+      margin-left: 4px;
+
+      cursor: pointer;
+    }
+
+    .n-input__icon svg {
+      width: 24px;
+      height: 24px;
+
+      pointer-events: none;
+    }
+
+    .n-input__password {
+      cursor: pointer;
+    }
+
+    .n-input__count {
+      display: inline-flex;
+      align-items: center;
+
+      height: 100%;
+
+      color: var(--n-sys-color-info);
+      font-size: 12px;
+    }
+
+    .el-input__count-inner {
+      display: inline-block;
+
+      padding-left: 8px;
+
+      line-height: initial;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@layer components {
+  .n-tag {
+    --n-comp-tag-container-height: 24px;
+    --n-comp-tag-container-font-size: 12px;
+    --n-comp-tag-container-radius-border: 4px;
+    --n-comp-tag-container-color-bg: var(--n-ref-palette-white);
+    --n-comp-tag-close-size: 16px;
+    --n-comp-tag-close-color-hover: var(--n-ref-palette-white);
+    --n-comp-tag-close-color-bg: var(--n-ref-palette-white);
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    height: var(--n-comp-tag-container-height);
+    padding: 0 8px;
+    box-sizing: border-box;
+
+    color: var(--n-comp-tag-container-color-text);
+    font-size: var(--n-comp-tag-container-font-size);
+    line-height: 1;
+    white-space: nowrap;
+
+    border-color: var(--n-comp-tag-container-color-border);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: var(--n-comp-tag-container-radius-border);
+
+    background-color: var(--n-comp-tag-container-color-bg);
+  }
+
+  .n-tag--size-small {
+    --n-comp-tag-container-height: 20px;
+    --n-comp-tag-close-size: 15px;
+  }
+
+  .n-tag--size-large {
+    --n-comp-tag-container-height: 32px;
+    --n-comp-tag-close-size: 18px;
+  }
+
+  .n-tag--appearance-primary {
+    --n-comp-tag-container-color-border: var(--n-sys-color-primary);
+    --n-comp-tag-container-color-text: var(--n-sys-color-primary);
+    --n-comp-tag-close-color: var(--n-sys-color-primary);
+    --n-comp-tag-close-color-bg-hover: var(--n-sys-color-primary);
+  }
+
+  .n-tag--appearance-secondary {
+    --n-comp-tag-container-color-border: var(--n-sys-color-secondary);
+    --n-comp-tag-container-color-text: var(--n-sys-color-secondary);
+    --n-comp-tag-close-color: var(--n-sys-color-secondary);
+    --n-comp-tag-close-color-bg-hover: var(--n-sys-color-secondary);
+  }
+
+  .n-tag--appearance-info {
+    --n-comp-tag-container-color-border: var(--n-sys-color-info);
+    --n-comp-tag-container-color-text: var(--n-sys-color-info);
+    --n-comp-tag-close-color: var(--n-sys-color-info);
+    --n-comp-tag-close-color-bg-hover: var(--n-sys-color-info);
+  }
+
+  .n-tag--appearance-success {
+    --n-comp-tag-container-color-border: var(--n-sys-color-success);
+    --n-comp-tag-container-color-text: var(--n-sys-color-success);
+    --n-comp-tag-close-color: var(--n-sys-color-success);
+    --n-comp-tag-close-color-bg-hover: var(--n-sys-color-success);
+  }
+
+  .n-tag--appearance-warn {
+    --n-comp-tag-container-color-border: var(--n-sys-color-warn);
+    --n-comp-tag-container-color-text: var(--n-sys-color-warn);
+    --n-comp-tag-close-color: var(--n-sys-color-warn);
+    --n-comp-tag-close-color-bg-hover: var(--n-sys-color-warn);
+  }
+
+  .n-tag--appearance-error {
+    --n-comp-tag-container-color-border: var(--n-sys-color-error);
+    --n-comp-tag-container-color-text: var(--n-sys-color-error);
+    --n-comp-tag-close-color: var(--n-sys-color-error);
+    --n-comp-tag-close-color-bg-hover: var(--n-sys-color-error);
+  }
+
+  .n-tag--is-closable {
+    padding-right: 6px;
+  }
+
+  .n-tag__close {
+    position: relative;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: var(--n-comp-tag-close-size);
+    height: var(--n-comp-tag-close-size);
+    margin-right: -3px;
+    margin-left: 3px;
+
+    color: var(--n-comp-tag-close-color);
+    font-size: calc(var(--n-comp-tag-close-size) - 2px);
+    line-height: 1em;
+
+    border-radius: 50%;
+
+    background-color: var(--n-comp-tag-close-color-bg);
+
+    cursor: pointer;
+
+    fill: currentcolor;
+  }
+
+  .n-tag--size-small .n-tag__close {
+    margin-right: -2px;
+    margin-left: 2px;
+  }
+
+  .n-tag--size-large .n-tag__close {
+    margin-right: -5px;
+    margin-left: 5px;
+  }
+
+  .n-tag__content {
+    display: flex;
+    align-items: center;
+  }
+
+  .n-tag__close:hover {
+    color: var(--n-comp-tag-close-color-hover);
+
+    background-color: var(--n-comp-tag-close-color-bg-hover);
+  }
+
+  .n-tag__close svg {
+    width: var(--n-comp-tag-close-size);
+    height: var(--n-comp-tag-close-size);
+  }
+}

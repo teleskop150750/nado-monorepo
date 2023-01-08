@@ -1,0 +1,1 @@
+export const LAYOUT_DEFAULT_KEY = 'LAYOUT_DEFAULT_KEY'

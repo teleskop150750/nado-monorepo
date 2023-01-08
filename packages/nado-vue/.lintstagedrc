@@ -1,0 +1,6 @@
+{
+  "*.{js,cjs}": ["eslint --fix"],
+  "*.vue": ["eslint --fix", "stylelint --fix"],
+  "*.json": ["eslint --fix"],
+  "*.css": ["stylelint --fix"]
+}

@@ -1,0 +1,122 @@
+@layer components {
+  .n-date-table-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30px;
+    box-sizing: border-box;
+  }
+
+  .n-date-table-cell--in-range {
+    background-color: var(--n-sys-color-primary-100);
+  }
+
+  .n-date-table-cell--is-end-date,
+  .n-date-table-cell--is-start-date {
+    color: var(--n-ref-palette-white);
+  }
+
+  .n-date-table-cell--is-start-date {
+    margin-left: 5px;
+
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .n-date-table-cell--is-end-date {
+    margin-right: 5px;
+
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .n-date-table-cell--is-end-date.n-date-table-cell--is-disabled {
+    color: var(--n-text-color-placeholder);
+
+    background-color: var(--n-fill-color-light);
+
+    cursor: not-allowed;
+
+    opacity: 1;
+  }
+
+  .n-date-table-cell--selected {
+    margin-right: 5px;
+    margin-left: 5px;
+
+    border-radius: 15px;
+
+    background-color: var(--n-comp-date-picker-color-bg-in-range);
+  }
+
+  .n-date-table--is-week-mode .n-date-table__row--is-current .n-date-table-cell {
+    background-color: var(--n-comp-date-picker-color-bg-in-range);
+  }
+
+  .n-date-table--is-week-mode .n-date-table__row:hover .n-date-table-cell {
+    background-color: var(--n-comp-date-picker-color-bg-in-range);
+  }
+
+  .n-date-table-cell--is-selected:hover {
+    background-color: var(--n-comp-date-picker-color-bg-in-range-hover);
+  }
+
+  .n-date-table-cell--is-disabled {
+    color: var(--n-sys-color-text-disabled);
+
+    background-color: var(--n-sys-color-bg-disabled);
+  }
+
+  .n-date-table-cell--is-disabled.n-date-table-cell--is-current {
+    color: var(--n-sys-color-primary);
+  }
+
+  .n-date-table-cell__text {
+    position: absolute;
+    left: 50%;
+
+    display: block;
+
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+
+    line-height: 24px;
+
+    transform: translateX(-50%);
+  }
+
+  .n-date-table-cell--is-today .n-date-table-cell__text {
+    color: var(--n-sys-color-primary);
+    font-weight: var(--n-sys-font-weight-bold);
+  }
+
+  .n-date-table-cell--is-selected .n-date-table-cell__text {
+    color: var(--n-ref-palette-white);
+
+    border-radius: 15px;
+
+    background-color: var(--n-comp-date-picker-color-active);
+  }
+
+  .n-date-table-cell--is-end-date .n-date-table-cell__text,
+  .n-date-table-cell--is-start-date .n-date-table-cell__text {
+    color: var(--n-ref-palette-white);
+
+    border-radius: 50px;
+
+    background-color: var(--n-comp-date-picker-color-active);
+  }
+
+  .n-date-table-cell--is-today.n-date-table-cell--is-end-date .n-date-table-cell__text,
+  .n-date-table-cell--is-today.n-date-table-cell--is-start-date .n-date-table-cell__text {
+    color: var(--n-ref-palette-white);
+  }
+
+  .n-date-table-cell--is-current:not(.n-date-table-cell--is-disabled) .n-date-table-cell__text {
+    color: var(--n-ref-palette-white);
+
+    background-color: var(--n-comp-date-picker-color-active);
+  }
+}

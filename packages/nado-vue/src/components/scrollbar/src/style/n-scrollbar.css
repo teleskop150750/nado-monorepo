@@ -1,0 +1,110 @@
+@layer components {
+  @layer defaults {
+    .n-scrollbar {
+      --n-comp-scrollbar-opacity: 0.5;
+      --n-comp-scrollbar-opacity-hover: 0.9;
+      --n-comp-scrollbar-color-bg: var(--n-sys-color-secondary-500);
+      --n-comp-scrollbar-color-bg-hover: var(--n-sys-color-secondary-600);
+      --n-comp-scrollbar-bar-offset: 2px;
+      --n-comp-scrollbar-bar-size: 12px;
+
+      position: relative;
+
+      height: 100%;
+
+      overflow: hidden;
+    }
+
+    .n-scrollbar__wrap {
+      height: 100%;
+
+      overflow: auto;
+    }
+
+    .n-scrollbar__wrap--is-hidden-default {
+      scrollbar-width: none;
+    }
+
+    .n-scrollbar__wrap--is-hidden-default::-webkit-scrollbar {
+      display: none;
+    }
+
+    .n-scrollbar__thumb {
+      position: relative;
+
+      display: block;
+
+      width: 0;
+      height: 0;
+
+      border-radius: inherit;
+
+      cursor: pointer;
+
+      transition: var(--n-transition-duration) background-color;
+    }
+
+    .n-scrollbar__thumb::before {
+      position: absolute;
+      top: var(--n-comp-scrollbar-bar-offset);
+      left: var(--n-comp-scrollbar-bar-offset);
+      bottom: var(--n-comp-scrollbar-bar-offset);
+      right: var(--n-comp-scrollbar-bar-offset);
+      content: '';
+
+      border-radius: inherit;
+
+      background-color: var(--n-comp-scrollbar-color-bg);
+
+      opacity: var(--n-comp-scrollbar-opacity);
+    }
+
+    .n-scrollbar__thumb:hover::before {
+      background-color: var(--n-comp-scrollbar-color-bg-hover);
+
+      opacity: var(--n-comp-scrollbar-opacity-hover);
+    }
+
+    .n-scrollbar__bar {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+
+      border-radius: var(--n-comp-scrollbar-bar-size);
+    }
+
+    .n-scrollbar__bar--is-vertical {
+      top: 0;
+
+      width: var(--n-comp-scrollbar-bar-size);
+    }
+
+    .n-scrollbar__bar--is-vertical > div {
+      width: 100%;
+    }
+
+    .n-scrollbar__bar--is-horizontal {
+      left: 0;
+
+      height: var(--n-comp-scrollbar-bar-size);
+    }
+
+    .n-scrollbar__bar--is-horizontal > div {
+      height: 100%;
+    }
+
+    .n-scrollbar-fade-enter-active {
+      transition: opacity 340ms ease-out;
+    }
+
+    .n-scrollbar-fade-leave-active {
+      transition: opacity 120ms ease-out;
+    }
+
+    .n-scrollbar-fade-enter-from,
+    .n-scrollbar-fade-leave-active {
+      opacity: 0;
+    }
+  }
+}

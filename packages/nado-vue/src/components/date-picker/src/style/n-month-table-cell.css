@@ -1,0 +1,20 @@
+@layer components {
+  .n-month-table-cell {
+    font-size: 12px;
+  }
+
+  .n-month-table__cell--is-today {
+    color: var(--n-sys-color-primary);
+    font-weight: var(--n-sys-font-weight-bold);
+  }
+
+  .n-month-table-cell--is-current {
+    color: var(--n-ref-palette-white);
+
+    background-color: var(--n-comp-date-picker-color-active);
+  }
+
+  .n-month-table__cell:hover {
+    color: var(--n-comp-date-picker-color-text-hover);
+  }
+}

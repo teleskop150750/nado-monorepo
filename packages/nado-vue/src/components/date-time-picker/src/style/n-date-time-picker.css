@@ -1,0 +1,54 @@
+@layer components {
+  .n-date-time-picker {
+    --n-comp-date-time-picker-width: 220px;
+    --n-comp-date-time-picker-month-range-width: 300px;
+    --n-comp-date-time-picker-date-range-width: 350px;
+    --n-comp-date-time-picker-date-time-range-width: 400px;
+
+    text-align: left;
+  }
+
+  .n-date-time-picker--monthrange {
+    --n-comp-date-time-picker-width: var(--n-comp-date-time-picker-month-range-width);
+  }
+
+  .n-date-time-picker--daterange,
+  .n-date-time-picker--timerange {
+    --n-comp-date-time-picker-width: var(--n-comp-date-time-picker-date-range-width);
+  }
+
+  .n-date-time-picker--datetimerange {
+    --n-comp-date-time-picker-width: var(--n-comp-date-time-picker-date-time-range-width);
+  }
+
+  /* input */
+  .n-date-time-picker.n-input,
+  .n-date-time-picker.n-input__wrapper {
+    width: var(--n-comp-date-time-picker-width);
+  }
+
+  .n-date-time-picker--timerange.n-input__wrapper {
+    border: var(--n-sys-border);
+  }
+
+  .n-date-time-picker--dates .n-input__wrapper {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .n-date-time-picker .n-input__inner::selection {
+    outline: none;
+  }
+
+  .n-date-time-picker__clear {
+    margin: 0;
+
+    cursor: pointer;
+
+    pointer-events: all;
+  }
+
+  .n-date-time-picker__popper {
+    box-shadow: var(--n-sys-elevation-shadow-level-1);
+  }
+}

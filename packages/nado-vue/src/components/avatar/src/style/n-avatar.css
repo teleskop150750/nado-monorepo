@@ -1,0 +1,13 @@
+.n-avatar {
+  display: inline-flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--n-ref-palette-white);
+  font-size: 100%;
+  line-height: 1;
+
+  border-radius: 50%;
+  user-select: none;
+}

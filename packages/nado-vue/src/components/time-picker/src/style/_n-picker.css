@@ -1,0 +1,10 @@
+/* popper */
+.n-picker__popper:focus-visible {
+  outline: var(--n-sys-outline);
+}
+
+.n-picker__popper.n-popper {
+  border: var(--n-sys-border);
+
+  background: var(--n-ref-palette-white);
+}

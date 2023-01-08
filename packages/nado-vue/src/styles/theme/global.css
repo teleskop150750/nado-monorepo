@@ -1,0 +1,31 @@
+@layer default {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .n-page {
+    color: var(--n-sys-color-text-default);
+    font-size: 1rem;
+    font-family: var(--n-sys-font-family);
+    line-height: var(--n-sys-font-line-height-display);
+  }
+
+  .n-page__body {
+    margin: 0;
+  }
+
+  a,
+  area,
+  button,
+  [role='button'],
+  input,
+  label,
+  select,
+  summary,
+  textarea {
+    touch-action: manipulation;
+  }
+}

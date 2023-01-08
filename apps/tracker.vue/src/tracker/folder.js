@@ -1,0 +1,5 @@
+export const FOLDER_ACCESS = {
+  PRIVATE: 'PRIVATE',
+  PUBLIC: 'PUBLIC',
+  LIMIT: 'LIMIT',
+}

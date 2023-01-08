@@ -1,0 +1,100 @@
+@layer components {
+  .n-radio {
+    /* box */
+    --n-comp-n-radio-box-color-bg: var(--n-sys-color-secondary);
+    --n-comp-n-radio-box-color-bg-disabled: transparent;
+    --n-comp-n-radio-box-color-border: var(--n-sys-color-secondary);
+    --n-comp-n-radio-box-color-border-disabled: var(--n-sys-color-border-disabled);
+    --n-comp-n-radio-icon-color: var(--n-sys-color-secondary);
+    --n-comp-n-radio-icon-color-disabled: var(--n-sys-color-text-disabled);
+
+    /* label */
+    --n-comp-n-radio-label-color-text: inherit;
+    --n-comp-n-radio-label-color-text-disabled: var(--n-sys-color-text-disabled);
+    --n-comp-n-radio-label-font-weight: var(--n-sys-font-weight-regular);
+    --n-comp-n-radio-label-font-size: var(--n-sys-font-size-small);
+    --n-comp-n-radio-label-font-line-height: var(--n-sys-font-line-height-small);
+
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    align-items: center;
+
+    vertical-align: middle;
+
+    cursor: pointer;
+  }
+
+  .n-radio--is-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .n-radio--is-disabled {
+    /* box */
+    --n-comp-n-radio-box-color-bg: var(--n-comp-n-radio-box-color-bg-disabled);
+    --n-comp-n-radio-box-color-border: var(--n-comp-n-radio-box-color-border-disabled);
+    --n-comp-n-radio-icon-color: var(--n-comp-n-radio-icon-color-disabled);
+
+    /* label */
+    --n-comp-n-radio-label-color-text: var(--n-comp-n-radio-label-color-text-disabled);
+
+    opacity: 0.75;
+  }
+
+  .n-radio__inner {
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 20px;
+
+    user-select: none;
+  }
+
+  .n-radio:not(.n-radio--is-disabled).n-radio--is-focused .n-radio__inner,
+  .n-radio:not(.n-radio--is-disabled):hover .n-radio__inner {
+    outline: var(--n-sys-outline);
+  }
+
+  .n-radio__inner--truthy .n-radio__bg,
+  .n-radio__inner--indet .n-radio__bg {
+    background-color: var(--n-comp-n-radio-box-color-bg);
+  }
+
+  .n-radio__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    color: var(--n-comp-n-radio-icon-color);
+  }
+
+  .n-radio__check {
+    transform: scale3d(0, 0, 1);
+    transform-origin: 50% 50%;
+
+    transition: transform 0.22s cubic-bezier(0, 0, 0.2, 1) 0ms;
+  }
+
+  .n-radio__inner--truthy .n-radio__check {
+    transform: scaleZ(1);
+  }
+
+  .n-radio__label {
+    color: var(--n-comp-n-radio-label-color-text);
+    font-size: var(--n-comp-n-radio-label-font-size);
+    line-height: var(--n-comp-n-radio-label-font-line-height);
+  }
+
+  .n-radio__native {
+    position: absolute;
+
+    appearance: none;
+  }
+}

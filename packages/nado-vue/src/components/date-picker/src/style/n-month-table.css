@@ -1,0 +1,111 @@
+@layer components {
+  .n-month-table {
+    width: 100%;
+    margin: -1;
+
+    font-size: 12px;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+
+    user-select: none;
+  }
+
+  .n-month-table__cell {
+    padding: 16px 0;
+
+    text-align: center;
+
+    cursor: pointer;
+  }
+
+  .n-month-table__cell:focus-visible {
+    outline: 0;
+  }
+
+  .n-month-table__cell:focus-visible .n-month-table-cell {
+    outline: 2px solid var(--n-comp-date-picker-color-active);
+    outline-offset: 2px;
+  }
+
+  /* .n-month-table__cell div {
+  height: 48px;
+  padding: 6px 0;
+  box-sizing: border-box;
+} */
+
+  /*
+.n-month-table__cell--is-end-date div,
+.n-month-table__cell--is-start-date div {
+  color: hsl(0deg 0% 100%);
+}
+
+.n-month-table__cell--is-start-date div {
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.n-month-table__cell--is-end-date div {
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.n-month-table__cell--in-range div {
+  background-color: var(--n-comp-date-picker-color-bg-in-range);
+}
+
+.n-month-table__cell--in-range div:hover {
+  background-color: var(--n-comp-date-picker-color-bg-in-range-hover);
+} */
+
+  .n-month-table__cell .cell {
+    display: block;
+
+    width: 60px;
+    height: 36px;
+    margin: 0 auto;
+
+    color: var(--n-comp-date-picker-color-text);
+    line-height: 36px;
+
+    border-radius: 18px;
+  }
+
+  .n-month-table__cell .cell:hover {
+    color: var(--n-comp-date-picker-color-text-hover);
+  }
+
+  .n-month-table__cell.today .cell {
+    color: var(--n-color-primary);
+    font-weight: 700;
+  }
+
+  .n-month-table__cell.disabled .cell {
+    color: var(--n-text-color-placeholder);
+
+    background-color: var(--n-fill-color-light);
+
+    cursor: not-allowed;
+  }
+
+  .n-month-table__cell.end-date .cell,
+  .n-month-table__cell.start-date .cell {
+    color: hsl(0deg 0% 100%);
+
+    background-color: var(--n-comp-date-picker-color-active);
+  }
+
+  .n-month-table__cell.today.end-date .cell,
+  .n-month-table__cell.today.start-date .cell {
+    color: hsl(0deg 0% 100%);
+  }
+
+  .n-month-table__cell.disabled .cell:hover {
+    color: var(--n-text-color-placeholder);
+  }
+
+  .n-month-table__cell.current:not(.disabled) .cell {
+    color: var(--n-comp-date-picker-color-active);
+  }
+}
